@@ -1,18 +1,26 @@
-.jumbotron {
-    background-color: lightskyblue;
-    text-align: center;
-    font-size: 25px;
+* {
+    box-sizing: border-box;
 }
 
+
+
+.jumbotron,
 .card-header {
+    background-color: rgb(177, 205, 231);
     text-align: center;
-    background-color: lightslategray;
+
+    font-family: 'Roboto Condensed', sans-serif;
+
 }
 
+.card-body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: rgb(223, 228, 236);
 
+}
 
 
 body {
-    background-image:url("photos/marina-vitale-206978-unsplash.jpg");
+    background-image: url("photos/marina-vitale-206978-unsplash.jpg");
 
 }
