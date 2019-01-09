@@ -13,14 +13,10 @@
 
 }
 
-.card-body {
+.card-body,
+tbody {
     font-family: 'Roboto Condensed', sans-serif;
     background-color: rgb(223, 228, 236);
-
-}
-tbody {
-    background-color: rgb(223, 228, 236);
-
 }
 
 body {
