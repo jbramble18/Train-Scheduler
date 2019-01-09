@@ -1,0 +1,14 @@
+.jumbotron {
+    background-color: blue;
+    text-align: center;
+    font-size: 25px;
+}
+
+h4 {
+    text-align: center;
+    background-color: blue;
+}
+
+#addTrain {
+    background-color: blue;
+}
