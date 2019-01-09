@@ -1,14 +1,18 @@
 .jumbotron {
-    background-color: blue;
+    background-color: lightskyblue;
     text-align: center;
     font-size: 25px;
 }
 
-h4 {
+.card-header {
     text-align: center;
-    background-color: blue;
+    background-color: lightslategray;
 }
 
-#addTrain {
-    background-color: blue;
+
+
+
+body {
+    background-image:url("photos/marina-vitale-206978-unsplash.jpg");
+
 }

@@ -54,11 +54,12 @@ firebase.database().ref().on('child_added', function (childSnapshot) {
   var tArrival = childSnapshot.val().firstArrival;
   var tFreq = childSnapshot.val().frequency;
 
-  console.log(tName,tDest,tArrival,tFreq);
+  // console.log(tName,tDest,tArrival,tFreq);
 
-  var tFrequency = frequency;
-  var firstTime = firstArrival;
-
+  var tFrequency = tFreq;
+  // frequency
+  var firstTime = tArrival;
+// firstArrival
   var firstTimeConverted = moment(firstTime, "hh:mm").subtract(1, "years");
   // console.log(firstTimeConverted);
 
@@ -74,7 +75,7 @@ firebase.database().ref().on('child_added', function (childSnapshot) {
   var tMinutesTillTrain = tFrequency - tRemainder;
   // console.log("Minutes Till Train: " + tMinutesTillTrain);
 
-  var nextTrain = moment().add(tMinutesTillTrain, "minutes").format("hh:mm");
+  var nextTrain = moment().add(tMinutesTillTrain, "minutes").format("hh:mm A");
   // console.log("Arrival Time: " + moment(nextTrain).format("hh:mm"));
 
     $("#train-table > tbody").append("<tr><td>" + tName + "</td><td>" +
@@ -83,32 +84,7 @@ firebase.database().ref().on('child_added', function (childSnapshot) {
     
 
   }, function(errorObject) {
-    console.log("Errors handled: " + errorObject.coe);
+    console.log("Errors handled: " + errorObject.code);
   });
 
-//   firebase.database().ref().orderByChild("dateAdded").limitToLast(1).on("child_added",function(snapshot){
-//   $("#name").html(snapshot.val().name);
-//   $("#destination").html(snapshot.val().destination);
-//   $("#next-arr").html(snapshot.valfirst);
-//   $("#freq").html(snapshot.val().frequency);
-// })
 
-
-
-
-// firebase.database().ref().on('child_added', function(snapshot){
-//   $("#train-table").append("<th>" + snapshot.val().trainName + "</th>");
-//   $("#train-table").append("<td>" + snapshot.val().destination + "</th>");
-//   $("#train-table").append("<td>" + snapshot.val().nextTrain + "</th>");
-//   $("#train-table").append("<td>" + snapshot.val().frequency + "</th>");
-//   $("#train-table").append("<td>" + snapshot.val().minutesAway + "</th>");
-
-// })
-
-
-// firebase.database().ref().orderByChild("dateAdded").limitToLast(1).on("child_added",function(snapshot){
-//   $("#name").html(snapshot.val().name);
-//   $("#destination").html(snapshot.val().destination);
-//   $("#next-arr").html(snapshot.valfirst);
-//   $("#freq").html(snapshot.val().frequency);
-// })
